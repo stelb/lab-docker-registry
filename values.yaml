@@ -1,0 +1,9 @@
+replicaCount: 3
+persistence:
+  enabled: true
+  size: 50Gi
+
+proxy:
+  enabled: true
+  # kubectl -n registry create secret generic registry-remote  --from-literal "proxyUsername=X" --from-literal=proxyPassword=Y
+  secretRef: registry-remote
